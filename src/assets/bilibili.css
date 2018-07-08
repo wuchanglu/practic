@@ -52,6 +52,16 @@
   font-size: 0.93rem;
 }
 
+.content {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.contentbox {
+  position: relative;
+}
+
 /* .navigation-box 包裹 .navigation-box__navigation */
 
 .navigation-box {
@@ -71,6 +81,10 @@
   overflow-y: hidden;
   white-space: nowrap;
   background-color: white;
+}
+
+.navigation-box__navigation::-webkit-scrollbar {
+  display: none;
 }
 
 /* .navigation__link 包裹 .navigation__link--selected */
@@ -157,6 +171,7 @@
   margin-top: 1rem;
   font-size: 1rem;
   color: black;
+  letter-spacing: 0;
   text-align: left;
 }
 
@@ -208,6 +223,10 @@
   white-space: nowrap;
 }
 
+.content2__navigation::-webkit-scrollbar {
+  display: none;
+}
+
 /* .content2__case 包裹 .case__labelbox .case__linkcase */
 
 .content2__case {
@@ -220,8 +239,8 @@
 
 .case__labelbox {
   width: 100%;
-  margin-left: 2rem;
-  margin-top: 10%;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 /* .case__linkcase 包裹 .linkcase__linkbox */
@@ -241,9 +260,7 @@
   color: #212121;
 }
 
-/* .labelbox__right 包裹 .right__lable */
-
-.labelbox__right {
+.labelbox__right--recommend {
   float: right;
   margin-right: 5%;
   font-size: 1rem;
@@ -251,7 +268,17 @@
   line-height: 0.59733rem;
 }
 
-.right__lable {
+/* .labelbox__right 包裹 .right__lable */
+
+.labelbox__right {
+  float: right;
+  margin-right: 5%;
+  font-size: 1rem;
+  color: silver;
+  line-height: 0.59733rem;
+}
+
+.right__label {
   font-size: 1.2rem;
   line-height: 2.26133rem;
   text-align: left;
@@ -304,4 +331,33 @@
 
 .label2__span {
   color: white;
+}
+
+.footer {
+  font-size: 1rem;
+  color: #757575;
+  text-align: center;
+  height: 8rem;
+  line-height: 3rem;
+  margin-top: 1rem;
+}
+
+.roll-back {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+}
+
+* {
+  text-decoration: none;
+  margin: 0;
+}
+
+#app {
+  font-family: '微软雅黑';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
 }

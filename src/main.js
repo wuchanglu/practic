@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './route'
+import './assets/bilibili.css'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

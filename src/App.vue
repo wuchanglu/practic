@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <div class="search">
+    <div class="header">
       <a>
-        <svg class="logo"
+        <svg class="header__logo"
           data-name="\u56FE\u5C42 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 62 28"
@@ -81,7 +81,7 @@
         </svg>
       </a>
       <a>
-        <svg class="fangdajing"
+        <svg class="header__search"
           id="icon-sousuo"
           viewBox="0 0 1024 1024"
           width="100%"
@@ -89,10 +89,9 @@
           <path d="M448 128c176 0 320 144 320 320 0 73.6-25.6 147.2-73.6 204.8l-19.2 22.4-22.4 19.2C595.2 742.4 521.6 768 448 768 272 768 128 624 128 448S272 128 448 128m0-64C236.8 64 64 236.8 64 448s172.8 384 384 384c92.8 0 179.2-35.2 246.4-89.6l211.2 208c6.4 6.4 12.8 9.6 22.4 9.6s16-3.2 22.4-9.6c12.8-16 12.8-35.2 0-48l-208-208c54.4-67.2 89.6-153.6 89.6-246.4 0-211.2-172.8-384-384-384z"></path>
         </svg>
       </a>
-      <div class="rentoua">
+      <div class="header__user">
         <a>
-          <svg class="rentou"
-            data-name="\u56FE\u5C42 1"
+          <svg data-name="\u56FE\u5C42 1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 80 80">
             <title>default avatar</title>
@@ -112,119 +111,26 @@
           </svg>
         </a>
       </div>
-      <div class="xiazai">
-        <p class="xiazaip">下载App</p>
+      <div class="header__download">
+        <p class="download__p">下载App</p>
       </div>
     </div>
-    <div class="contentbody">
-      <items></items>
-      <heade></heade>
+    <div class="content">
+      <navigation-component></navigation-component>
+
     </div>
   </div>
 </template>
 
 <script>
-import first from './components/first'
-import heade from './components/head'
-import items from './components/items'
-import donghua from './components/donghua'
+import content1Component from './components/contentFirst'
+import navigationComponent from './components/navigation'
+import content2Component from './components/contentSecond'
 export default {
   components: {
-    first: first,
-    heade: heade,
-    items: items,
-    donghua: donghua
+    content1Component: content1Component,
+    navigationComponent: navigationComponent,
+    content2Component: content2Component
   }
 }
 </script>
-
-
-<style>
-* {
-  text-decoration: none;
-  margin: 0;
-}
-#app {
-  font-family: '微软雅黑';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-.header__navigation {
-  text-decoration: none;
-  color: #757575;
-  margin-left: 2rem;
-}
-.header__navigation--visited {
-  color: #fb7299;
-}
-.contentbody {
-  margin: 0;
-  overflow: hidden;
-  position: relative;
-}
-.search {
-  width: 100%;
-  height: 4.3rem;
-  margin: 0;
-  text-align: center;
-  position: relative;
-}
-.logo {
-  width: 5rem;
-  position: absolute;
-  left: 1.9rem;
-  top: 1.5rem;
-}
-.fangdajing {
-  width: 1.5rem;
-  height: 1.5rem;
-  position: absolute;
-  left: 17rem;
-  top: 1.9rem;
-}
-.rentou {
-  width: 2rem;
-  height: 2rem;
-}
-.rentoua {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 1rem;
-  overflow: hidden;
-  position: absolute;
-  left: 20rem;
-  top: 1.5rem;
-}
-.xiazai {
-  width: 5rem;
-  height: 1.7rem;
-  background: #fb7299;
-  padding-top: 0.5rem;
-  padding-right: 0.2rem;
-  padding-left: 0.5rem;
-  color: white;
-  border-radius: 0.5rem;
-  position: absolute;
-  right: 1rem;
-  top: 1.5rem;
-}
-.xiazaip {
-  font-size: 0.93rem;
-}
-.huiqu {
-  position: fixed;
-  left: 25rem;
-  top: 60rem;
-  width: 3rem;
-  height: 3rem;
-}
-.footer {
-  font-size: 1rem;
-  color: #757575;
-  text-align: center;
-  height: 8rem;
-  line-height: 3rem;
-  margin-top: 1rem;
-}
-</style>
