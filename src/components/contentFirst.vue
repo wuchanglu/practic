@@ -46,6 +46,7 @@
       <p>信息网络传播视听节目许可证：0910417</p>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -182,6 +183,23 @@ export default {
      */
     onLinkClick: function(item) {
       window.location.href = item.URL
+    }
+  },
+  // 对高度问题的临时解决方法，当组件加载完成时获得视图的高度，并利用视图高度对组件高度进行处理
+  mounted() {
+    let height = document.documentElement.clientHeight
+    let content = document.getElementsByClassName('content')[0]
+    let header = document.getElementsByClassName('header')[0]
+    let content1 = document.getElementsByClassName('content1')[0]
+
+    if (height === 1024 || height === 1366) {
+      header.style.height = height * 0.11 + 'px'
+      content1.style.height = height * 0.8 + 'px'
+      content.style.height = height * 0.89 + 'px'
+    } else {
+      header.style.height = height * 0.07 + 'px'
+      content1.style.height = height * 0.89 + 'px'
+      content.style.height = height * 0.93 + 'px'
     }
   }
 }

@@ -338,6 +338,25 @@ export default {
     onLinkClick: function(item) {
       window.location.href = item.URL
     }
+  },
+  // 对高度问题的临时解决方法，当组件加载完成时获得视图的高度，并利用视图高度对组件高度进行处理
+  mounted() {
+    let height = document.documentElement.clientHeight
+    let content2__case = document.getElementsByClassName('content2__case')[0]
+    content2__case.style.height = height * 0.845 + 'px'
+    let content2__navigation = document.getElementsByClassName(
+      'content2__navigation'
+    )[0]
+
+    content2__navigation.style.height = height * 0.085 + 'px'
+    let header = document.getElementsByClassName('header')[0]
+    if (height === 1024 || height === 1366) {
+      content2__case.style.height = height * 0.718 + 'px'
+      header.style.height = height * 0.11 + 'px'
+    } else {
+      content2__case.style.height = height * 0.79 + 'px'
+      header.style.height = height * 0.07 + 'px'
+    }
   }
 }
 </script>
